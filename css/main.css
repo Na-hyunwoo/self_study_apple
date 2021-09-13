@@ -24,11 +24,12 @@ a{
 
 .global-nav{
     height:44px;
-
+    padding: 0 1rem;
 }
 
 .local-nav{
     height:52px;
+    padding : 0 1rem;
     border-bottom: 1px solid #ddd;
 }
 
@@ -59,4 +60,43 @@ a{
 /* not을 쓰면 괄호안 조건을 제외하고(여집합)*/
 .local-nav-links a:not(.product-name){
     margin-left: 2em;
+}
+
+.scroll-section{
+    padding-top:50vh;
+}
+
+#scroll-section-0 h1{
+    font-size: 4rem;
+    text-align:center;
+}
+
+.main-message{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px 0px;
+    height:3em;
+    font-size:2.5rem;
+}
+
+.main-message p{
+    font-weight: bold;
+    text-align:center;
+    line-height:1.2;
+}
+
+.description{
+    padding:0 1rem;
+    font-size:1.2rem;
+    color:#888;
+}
+
+.description strong{
+    float:left;
+    /*em이라는 녀석은 현재 이 font-size를 1em으로 인식함. 따라서
+    이를 활용하면 편할 수 있다.*/
+    margin-right:0.2em;
+    font-size:3rem;
+    color:rgb(29,29,31);
 }
