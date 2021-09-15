@@ -1,3 +1,5 @@
+/*css복습할거면 페이지 내용 css 2작성 위주로 보면 되겠다. 이때 내용이 많아. */
+
 @charset 'uft-8';
 
 html{
@@ -105,6 +107,7 @@ a{
 }
 
 .description strong{
+    /*float라는 녀석은 해당 요소를 왼쪽 정렬!*/
     float:left;
     /*em이라는 녀석은 현재 이 font-size를 1em으로 인식함. 따라서
     이를 활용하면 편할 수 있다.*/
