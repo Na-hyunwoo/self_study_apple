@@ -105,7 +105,7 @@
                 break;
         }
     }
-
+    //이해가 안가는 부분이 발생했을 때, 다시 짚고 넘어가면서 해보자. 이해가 안되면 말짱 꽝이니까. 
     function scrollLoop(){
         prevScrollHeight=0;
         for (let i=0;i<currentScene;i++){
