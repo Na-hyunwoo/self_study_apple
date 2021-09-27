@@ -81,6 +81,7 @@
         return rv;
     }
 
+    //scroll animation iplementation
     function playAnimation(){
         const objs=sceneInfo[currentScene].objs;
         const values=sceneInfo[currentScene].values;
