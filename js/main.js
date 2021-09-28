@@ -81,7 +81,8 @@
         return rv;
     }
 
-    //scroll animation iplementation
+    //scroll animation iplementation reviewing
+    //scroll animation iplementation2 reviewing 다시봐도 어렵다..
     function playAnimation(){
         const objs=sceneInfo[currentScene].objs;
         const values=sceneInfo[currentScene].values;
@@ -109,6 +110,7 @@
     //이해가 안가는 부분이 발생했을 때, 다시 짚고 넘어가면서 해보자. 이해가 안되면 말짱 꽝이니까. 
     //현재 활성 씬 결정하기 리뷰잉.
     //현재 활성 씬 반영하기 리뷰잉.
+    
     function scrollLoop(){
         prevScrollHeight=0;
         for (let i=0;i<currentScene;i++){
