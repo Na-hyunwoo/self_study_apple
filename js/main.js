@@ -71,6 +71,7 @@
         document.body.setAttribute('id',`show-scene-${currentScene}`);
     }
 
+    //scroll animation iplementation3 reviewing 처음 들었을 때 보단 훨씬 이해가 된다. 
     function calcValues(values, currentYOffset){
         let rv;
         /*현재 씬(스크롤 섹션)에서 스크롤된 범위를 구하기 */
@@ -92,7 +93,7 @@
             case 0:
                 //console.log('0 play');
                 let messageA_opacity_in=calcValues(values.messageA_opacity,currentYOffset);
-                objs.messageA.style.messageA_opacity=messageA_opacity_in;
+                objs.messageA.style.opacity=messageA_opacity_in;
                 console.log(messageA_opacity_in);
                 
                 break;
