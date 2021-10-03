@@ -109,6 +109,7 @@
             }
             sceneInfo[i].objs.container.style.height=`${sceneInfo[i].scrollHeight}px`;
             
+            
         }
 
         yOffset=window.pageYOffset;
