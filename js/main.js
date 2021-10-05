@@ -18,8 +18,13 @@
                 messageB:document.querySelector('#scroll-section-0 .main-message.b'),
                 messageC:document.querySelector('#scroll-section-0 .main-message.c'),
                 messageD:document.querySelector('#scroll-section-0 .main-message.d'),
+                canvas:document.querySelector('#video-canvas-0'),
+                context:document.querySelector('#video-canvas-0').getContext('2d'),
+                videoImages:[]
             },
             values:{
+                videoImageCount:300,
+                imageSequence:[0,299],
                 messageA_opacity_in:[0, 1,{start:0.1,end:0.2}],
                 messageB_opacity_in:[0, 1,{start:0.3,end:0.4}],
                 messageC_opacity_in:[0, 1,{start:0.5,end:0.6}],
@@ -98,6 +103,18 @@
         }
     ];
 
+    function setCanvasImages(){
+        let imgElem;
+        for(let i=0;i<sceneInfo[0].values.videoImageCount;i++){
+            imgElem=new Image();
+            imgElem.src=`./video/001/IMG_${6726+i}.JPG`;
+            sceneInfo[0].objs.videoImages.push(imgElem);
+        }
+        console.log(sceneInfo[0].objs.videoImages);
+    }
+
+    setCanvasImages();
+
     function setLayout(){
         //각 스크롤 섹션의 높이 세팅
         for(let i=0;i<sceneInfo.length;i++){
@@ -124,6 +141,7 @@
         document.body.setAttribute('id',`show-scene-${currentScene}`);
     }
 
+    //고화질 비디오 부드럽게 처리하기2 !!
     //scroll animation iplementation3 reviewing 처음 들었을 때 보단 훨씬 이해가 된다. 
     function calcValues(values, currentYOffset){
         let rv;
