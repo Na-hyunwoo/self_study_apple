@@ -141,7 +141,7 @@
         document.body.setAttribute('id',`show-scene-${currentScene}`);
 
         const heightRatio=window.innerHeight/1080;
-        sceneInfo[0].objs.canvas.style.transform=`translate3d(-25%,-15%,0) scale(${heightRatio})`;
+        sceneInfo[0].objs.canvas.style.transform=`translate3d(-50%,-50%,0) scale(${heightRatio})`;
     }
 
     //고화질 비디오 부드럽게 처리하기2 !!

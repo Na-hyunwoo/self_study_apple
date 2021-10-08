@@ -75,7 +75,7 @@ a{
 }
 
 .scroll-section{
-    border:3px solid red;
+   
     padding-top:50vh;
 }
 
@@ -182,7 +182,6 @@ a{
     position: fixed;
     left: 0;
     width: 100%;
-
 }
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
@@ -195,6 +194,7 @@ a{
 .sticky-elem-canvas{
     top:0;
     height: 100%;
+   
   
 }
 
@@ -202,6 +202,7 @@ a{
     position:absolute;
     top:50%;
     left:50%;
+    
 }
 
 @media (min-width:1024px){
