@@ -119,12 +119,12 @@
         }
        
 
-        let imgElem2;
-        for(let i=0;i<sceneInfo[2].values.videoImageCount;i++){
-            imgElem2=new Image();
-            imgElem2.src=`./video/002/IMG_${7027+i}.JPG`;
-            sceneInfo[2].objs.videoImages.push(imgElem2);
-        }
+        // let imgElem2;
+        // for(let i=0;i<sceneInfo[2].values.videoImageCount;i++){
+        //     imgElem2=new Image();
+        //     imgElem2.src=`./video/002/IMG_${7027+i}.JPG`;
+        //     sceneInfo[2].objs.videoImages.push(imgElem2);
+        // }
       
     }
 
@@ -138,7 +138,7 @@
                 
             }else if(sceneInfo[i].type==='normal'){
                 sceneInfo[i].scrollHeight=sceneInfo[i].objs.container.offsetHeight;
-            }
+            }    
             sceneInfo[i].objs.container.style.height=`${sceneInfo[i].scrollHeight}px`;
             
             
