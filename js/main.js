@@ -83,11 +83,11 @@
                 messageA_opacity_out:[1, 0,{start:0.25,end:0.3}],
                 messageB_opacity_out:[1, 0,{start:0.45,end:0.5}],
                 messageC_opacity_out:[1, 0,{start:0.65,end:0.7}],
-                messageA_translateY_out:[-10,-20,{start:0.3,end:0.35}],
-                messageB_translateY_out:[-10,-20,{start:0.58,end:0.63}],
-                messageC_translateY_out:[-10,-20,{start:0.85,end:0.9}],
-                pinB_scaleY:[0.5,1,{start:0.5,end:0.55}],
-                pinC_scaleY:[0.5,1,{start:0.72,end:0.77}],
+                messageA_translateY_out:[-8,-13,{start:0.3,end:0.35}],
+                messageB_translateY_out:[-8,-18,{start:0.58,end:0.6}],
+                messageC_translateY_out:[-8,-13,{start:0.85,end:0.9}],
+                pinB_scaleY:[0.5,0.6,{start:0.5,end:0.55}],
+                pinC_scaleY:[0.5,0.6,{start:0.72,end:0.77}],
                 pinB_opacity_in:[0,1,{start:0.5,end:0.55}],
                 pinC_opacity_in:[0,1,{start:0.72,end:0.77}],
                 pinB_opacity_out:[1,0,{start:0.58,end:0.63}],
@@ -119,12 +119,12 @@
         }
        
 
-        // let imgElem2;
-        // for(let i=0;i<sceneInfo[2].values.videoImageCount;i++){
-        //     imgElem2=new Image();
-        //     imgElem2.src=`./video/002/IMG_${7027+i}.JPG`;
-        //     sceneInfo[2].objs.videoImages.push(imgElem2);
-        // }
+        let imgElem2;
+        for(let i=0;i<sceneInfo[2].values.videoImageCount;i++){
+            imgElem2=new Image();
+            imgElem2.src=`./video/002/IMG_${7027+i}.JPG`;
+            sceneInfo[2].objs.videoImages.push(imgElem2);
+        }
       
     }
 

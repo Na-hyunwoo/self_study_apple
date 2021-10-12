@@ -229,7 +229,8 @@ a{
         font-size:1.5vw;
     }
     .desc-message{
-        width:20%;
+        width:50%;
+        opacity:0;
     }
 
     #scroll-section-2 .b{
