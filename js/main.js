@@ -193,6 +193,7 @@
 
     //scroll animation iplementation reviewing
     //scroll animation iplementation2 reviewing 다시봐도 어렵다..
+    //마지막 섹션 인터랙션 분석
     function playAnimation(){
         const objs=sceneInfo[currentScene].objs;
         const values=sceneInfo[currentScene].values;
