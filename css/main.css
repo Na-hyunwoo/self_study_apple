@@ -209,7 +209,13 @@ a{
 }
 
 .image-blend-canvas{
-    border:3px solid red;
+    /* background:blue; */
+}
+
+#scroll-section-3{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media (min-width:1024px){
