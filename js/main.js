@@ -329,12 +329,17 @@
                 const heightRatio=window.innerHeight/objs.canvas.height;
                 let canvasScaleRatio;
 
+                console.log(heightRatio);
+                console.log(widthRatio);
+
                 if(widthRatio<=heightRatio){
                     //캔버스보다 브라우저 창이 홀쭉한 경우
                     canvasScaleRatio=heightRatio;
+                    console.log('heightRatio로 결정');
                 }else{
                     //캔버스보다 브라우저 창이 납작한 경우
                     canvasScaleRatio=widthRatio;
+                    console.log('widthRatio로 결정');
                 }
 
                 objs.canvas.style.transform=`scale(${canvasScaleRatio})`;
