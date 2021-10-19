@@ -323,7 +323,9 @@
 
 
                 break;
+                
             case 3:
+                //좌우흰색 여백 원리. 할 수 있다!
                 //console.log('3 play');
                 //가로,세로 모두 꽉 차게 하기 위해 여기서 세팅(계산 필요)
                 const widthRatio=window.innerWidth/objs.canvas.width;
