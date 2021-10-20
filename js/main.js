@@ -112,6 +112,8 @@
                 images: []
             },
             values:{
+                rect1X:[0,0,{start:0,end:0}],
+                rect2X:[0,0,{start:0,end:0}],
 
             }
             
@@ -348,7 +350,15 @@
                 objs.canvas.style.transform=`scale(${canvasScaleRatio})`;
                 objs.context.drawImage(objs.images[0],0,0);
 
-                
+                //캔버스 사이즈에 맞춰 가정한 innerWidth와 innerHeight. 
+                const recalculatedInnerWidth=window.innerWidth/canvasScaleRatio;
+                const recalculatedInnerWidth=window.innerHeight/canvasScaleRatio;
+
+                const whiteRectWidth=recalculatedInnerWidth*0.15;
+                values[0].rect1X[0]=(objs.canvas.width-recalculatedInnerWidth)/2;
+                values[1].rect1X[1]=values.rect1X[0]-whiteRectWidth;
+                values[0].rect2X[0]=values.rect1X[0]+recalculatedInnerWidth-whiteRectWidth;
+                values[1].rect1X[1]=values.rect1X[0]+whiteRectWidth;
 
                 break;
         }
