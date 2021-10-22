@@ -354,6 +354,8 @@
                 const recalculatedInnerWidth=window.innerWidth/canvasScaleRatio;
                 const recalculatedInnerHeight=window.innerHeight/canvasScaleRatio;
 
+                //캔버스 드로우 애니메이션에 대한 이해. 
+
                 const whiteRectWidth=recalculatedInnerWidth*0.15;
                 values.rect1X[0]=(objs.canvas.width-recalculatedInnerWidth)/2;
                 values.rect1X[1]=values.rect1X[0]-whiteRectWidth;
