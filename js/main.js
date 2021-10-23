@@ -114,6 +114,7 @@
             values:{
                 rect1X:[0,0,{start:0,end:0}],
                 rect2X:[0,0,{start:0,end:0}],
+                rectStartY:0,
 
             }
             
@@ -354,13 +355,18 @@
                 const recalculatedInnerWidth=window.innerWidth/canvasScaleRatio;
                 const recalculatedInnerHeight=window.innerHeight/canvasScaleRatio;
 
-                //캔버스 드로우 애니메이션에 대한 이해. 
+                if(!values.rectStartY){
+                    values.rectStartY=objs.canvas.getBoundingClientRect().top;
+                    
+                }
+                
+
 
                 const whiteRectWidth=recalculatedInnerWidth*0.15;
                 values.rect1X[0]=(objs.canvas.width-recalculatedInnerWidth)/2;
                 values.rect1X[1]=values.rect1X[0]-whiteRectWidth;
                 values.rect2X[0]=values.rect1X[0]+recalculatedInnerWidth-whiteRectWidth;
-                values.rect1X[1]=values.rect1X[0]+whiteRectWidth;
+                values.rect2X[1]=values.rect2X[0]+whiteRectWidth;
 
                 //좌우 흰색 박스 그리기
                 objs.context.fillRect(values.rect1X[0],0,parseInt(whiteRectWidth),objs.canvas.height);
