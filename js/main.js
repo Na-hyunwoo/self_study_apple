@@ -352,12 +352,15 @@
                 objs.context.drawImage(objs.images[0],0,0);
 
                 //캔버스 사이즈에 맞춰 가정한 innerWidth와 innerHeight. 
-                const recalculatedInnerWidth=window.innerWidth/canvasScaleRatio;
+                const recalculatedInnerWidth=document.body.offsetWidth/canvasScaleRatio;
                 const recalculatedInnerHeight=window.innerHeight/canvasScaleRatio;
 
+                //end왜 이럼?
                 if(!values.rectStartY){
                     values.rectStartY=objs.canvas.getBoundingClientRect().top;
                     
+                    values.rect1X[2].end=values.rectStartY/scrollHeight;
+                    values.rect2X[2].end=values.rectStartY/scrollHeight;
                 }
                 
 
@@ -369,8 +372,19 @@
                 values.rect2X[1]=values.rect2X[0]+whiteRectWidth;
 
                 //좌우 흰색 박스 그리기
-                objs.context.fillRect(values.rect1X[0],0,parseInt(whiteRectWidth),objs.canvas.height);
-                objs.context.fillRect(values.rect2X[0],0,parseInt(whiteRectWidth),objs.canvas.height);
+                // objs.context.fillRect(values.rect1X[0],0,parseInt(whiteRectWidth),objs.canvas.height);
+                // objs.context.fillRect(values.rect2X[0],0,parseInt(whiteRectWidth),objs.canvas.height);
+
+                objs.context.fillRect(
+                    parseInt(calcValues(values.rect1X,currentYOffset)),
+                    0,
+                    parseInt(whiteRectWidth),
+                    objs.canvas.height);
+                objs.context.fillRect(
+                    parseInt(calcValues(values.rect2X,currentYOffset)),
+                    0,
+                    parseInt(whiteRectWidth),
+                    objs.canvas.height);
 
                 break;
         }
