@@ -348,7 +348,7 @@
                     console.log('widthRatio로 결정');
                 }
 
-                objs.canvas.style.transform=`scale(${canvasScaleRatio})`;
+                // objs.canvas.style.transform=`scale(${canvasScaleRatio})`;
                 objs.context.drawImage(objs.images[0],0,0);
 
                 //캔버스 사이즈에 맞춰 가정한 innerWidth와 innerHeight. 
@@ -357,8 +357,8 @@
 
                 //end왜 이럼?
                 if(!values.rectStartY){
-                    values.rectStartY=objs.canvas.getBoundingClientRect().top;
-                    
+                    // values.rectStartY=objs.canvas.getBoundingClientRect().top;
+                    values.rectStartY=objs.canvas.offsetTop;
                     values.rect1X[2].end=values.rectStartY/scrollHeight;
                     values.rect2X[2].end=values.rectStartY/scrollHeight;
                 }
